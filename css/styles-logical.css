@@ -293,7 +293,7 @@ ul span {
   scrollbar-width: thin;
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1300px) {
   blockquote {
     background: var(--white20);
     border-radius: 8px;
