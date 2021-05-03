@@ -1,0 +1,351 @@
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+:root {
+  font-size: 16px;
+  --white30: white;
+  --white20: #3A3539;
+  --white10: #A5A3A5;
+/*
+  direction: rtl;
+  writing-mode: vertical-rl;
+*/
+}
+
+blockquote {
+  background: var(--white20);
+  border-radius: 8px;
+  font-size: 24px;
+  line-height: 24px;
+  margin-block-end: 63px;
+  margin-block-start: 80px;
+  padding-inline-end: 24px;
+  padding-inline-start: 24px;
+  padding-block-end: 24px;
+  padding-block-start: 24px;
+}
+
+blockquote p {
+  color: var(--white30);
+}
+
+body {
+  color: var(--white30);
+  /* font-family: charter; */
+  font-family: 'Nunito', sans-serif;
+  background: #251F24;
+}
+
+a {
+  color: var(--white10);
+}
+
+header {
+  font-size: 14px;
+  color: var(--white);
+  inline-size: 188px;
+  margin-block-start: 12px;
+  padding-block-start: 12px;
+}
+
+header a {
+  color: var(--white10);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--white30);
+}
+
+header li {
+  color: var(--white10);
+  margin-block-end: 16px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-block-start: 20px;
+  margin-block-end: 16px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-block-end: 40px;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+hr {
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2)
+}
+
+li {
+  color: var(--white10);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+p {
+  color: var(--white10);
+  margin-block-end: 40px;
+}
+
+pre {
+  background: var(--white20);
+  /* border-radius: 8px; */
+  overflow: auto;
+  padding-inline: 40px;
+  padding-block: 40px;
+  /* border-inline-color: pink; */
+  /* border-inline: 10px solid cyan; */
+  /* border-block: 10px solid white; */
+  /* border-inline-start: 10px solid white; */
+  /* border-block-end: 10px solid cyan; */
+  border: 10px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6;
+  /* border-radius: 50%; */
+  /* inline-size: 200px; */
+  /* block-size: 200px; */
+  border-start-start-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+ul li {
+  color: var(--white);
+}
+
+ul span {
+  color: var(--white10);
+}
+
+.fondoHeader {
+  /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/fondo-header.png'); */
+  background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  block-size: 50px;
+}
+
+.form input {
+  background: #251F24;
+  border: 1px solid var(--white30);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--white30);
+  margin-block-end: 24px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  width: 100%;
+}
+
+.form input[type="submit"] {
+  border: none;
+  background: #EEBBC3;
+  color: #000;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--white10);
+}
+
+.header-content {
+  padding-inline: 20px;
+}
+
+.main-content {
+  padding-inline: 16px;
+}
+
+.main hr {
+  display: none;
+}
+
+.section-content {
+  counter-reset: titleLists;
+}
+
+.section-content h3 {
+  counter-increment: titleLists;
+}
+
+/* Se utilizan los pseudoelementos para garegar contenido NO semántico */
+.section-content h3::before {
+  content: counter(titleLists) ". ";
+}
+/*
+.section-content h3::after {
+  content: "";
+  width: 32px;
+  height: 4px;
+  background: var(--white30);
+  display: inline-block;
+}
+*/
+
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+  max-inline-size: 100%;
+  /* max-width: 100%; */
+}
+
+.slider-container {
+  /* border: 1px solid hotpink; */
+  /* block-size: 100px; */
+  display: block;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.slider-bullet {
+  display: inline-block;
+  border: 1px solid white;
+  background: var(--white30);
+  inline-size: 15px;
+  block-size: 15px;
+  border-radius: 50%;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 10px;
+}
+
+::selection {
+  background: lightskyblue;
+}
+
+.video {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.wrapper {
+  max-inline-size: 902px;
+  margin: auto;
+}
+
+/* Estilos a la barra de scroll en Edge y Chrome */
+.slider-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+/* .slider-container::-webkit-scrollbar:vertical {
+  width:10px;
+} */
+
+.slider-container::-webkit-scrollbar-button:increment,.slider-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.slider-container::-webkit-scrollbar:horizontal {
+  height: 5px;
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+  background-color: #383737;
+  border-radius: 20px;
+  /* border: 2px solid #f1f2f3; */
+}
+
+.slider-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/*Estilos estándar experimentales (Principalmente Firefox)*/
+.slider-container {
+  scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+@media screen and (min-width: 1366px) {
+  header {
+    /* --white10: red; */ /* Cambia el valor de la variable solo dentro de este scope */
+    position: absolute;
+    inline-size: 188px;
+    /* top */
+    inset-block-start: 0;
+    /* bottom */
+    /* inset-block-end: 0; */
+    /* left */
+    /* inset-inline-start: 0; */
+    /* right */
+    /* inset-inline-end: 0; */
+    /* right */
+    inset-inline-start: -208px;
+    /* width: 188px;  reemplazado por inline-size */
+    padding-block-start: 20px;
+    /* height: 500px reemplazado por
+      block-size: 500px;
+    */
+  }
+
+  .fondoHeader {
+    block-size: 350px;
+  }
+
+  .header {
+    position: sticky ;
+    /* top */
+    inset-block-start: -65px;
+    /*
+    ejercicio para hacer un modal con valores lógicos
+    position: fixed;
+    background: red;
+    inset: 0;
+    inset: 50px; /* shortcut de:
+    inset-inline: 50px;
+    inset-block: 50px;
+    */
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 64px;
+    padding-inline: 0;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+    margin-block-end: 16px;
+  }
+}
